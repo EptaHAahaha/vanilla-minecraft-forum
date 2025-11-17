@@ -1,0 +1,233 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #2a2a2a 100%);
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    color: #ffd700;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 2px 2px 4px rgba(255,215,0,0.5); }
+    to { text-shadow: 2px 2px 4px rgba(255,0,0,0.5); }
+}
+
+.question-form {
+    background: rgba(26, 26, 26, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border: 2px solid #ffd700;
+    box-shadow: 0 4px 8px rgba(255,215,0,0.3);
+    transition: transform 0.3s;
+}
+
+.question-form:hover {
+    transform: translateY(-5px);
+}
+
+.question-form h2 {
+    color: #ffd700;
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.question-form input, .question-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s;
+}
+
+.question-form input:focus, .question-form textarea:focus {
+    border-color: #ff6b6b;
+    outline: none;
+}
+
+.question-form button {
+    background: linear-gradient(45deg, #ffd700, #ff6b6b);
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.3s;
+}
+
+.question-form button:hover {
+    background: linear-gradient(45deg, #ff6b6b, #ffd700);
+}
+
+.questions-list {
+    margin-top: 30px;
+}
+
+.question {
+    background: rgba(26, 26, 26, 0.9);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border: 2px solid #ffd700;
+    box-shadow: 0 4px 8px rgba(255,215,0,0.3);
+    transition: transform 0.3s;
+}
+
+.question:hover {
+    transform: translateY(-3px);
+}
+
+.question h3 {
+    color: #ffd700;
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.question p {
+    margin-bottom: 10px;
+}
+
+.answer-form {
+    margin-top: 15px;
+    display: none; /* Hidden by default, shown only for admins */
+}
+
+.answer-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s;
+}
+
+.answer-form textarea:focus {
+    border-color: #ff6b6b;
+    outline: none;
+}
+
+.answer-form button {
+    background: linear-gradient(45deg, #ffd700, #ff6b6b);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.3s;
+}
+
+.answer-form button:hover {
+    background: linear-gradient(45deg, #ff6b6b, #ffd700);
+}
+
+.answers {
+    margin-top: 20px;
+    padding-left: 20px;
+    border-left: 3px solid #ffd700;
+}
+
+.answer {
+    background: rgba(42, 42, 42, 0.8);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ff6b6b;
+}
+
+.admin-login {
+    background: rgba(26, 26, 26, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border: 2px solid #ffd700;
+    box-shadow: 0 4px 8px rgba(255,215,0,0.3);
+}
+
+.admin-login h2 {
+    color: #ffd700;
+    margin-top: 0;
+}
+
+.admin-login input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+}
+
+.admin-login button {
+    background: linear-gradient(45deg, #ffd700, #ff6b6b);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.admin-login button:hover {
+    background: linear-gradient(45deg, #ff6b6b, #ffd700);
+}
+
+.logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.moderation-btns {
+    margin-top: 10px;
+}
+
+.moderation-btns button {
+    background: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 0.8em;
+}
+
+.moderation-btns button:hover {
+    background: #cc5555;
+}

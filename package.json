@@ -1,0 +1,30 @@
+{
+  "name": "vanilla-minecraft-forum",
+  "version": "1.0.0",
+  "description": "A forum for Vanilla Minecraft discussions and questions.",
+  "main": "src/js/app.js",
+  "scripts": {
+    "start": "live-server public",
+    "build": "echo 'Build step not defined'",
+    "test": "echo 'No tests defined'"
+  },
+  "keywords": [
+    "minecraft",
+    "forum",
+    "vanilla"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {},
+  "homepage": "https://github.com/yourusername/vanilla-minecraft-forum",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/vanilla-minecraft-forum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/vanilla-minecraft-forum/issues"
+  }
+}
