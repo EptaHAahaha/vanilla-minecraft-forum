@@ -84,6 +84,79 @@ h1 {
     background: linear-gradient(45deg, #ff6b6b, #ffd700);
 }
 
+.tab-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background: rgba(26, 26, 26, 0.9);
+    color: #ffd700;
+    border: 2px solid #ffd700;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.3s;
+}
+
+.tab-btn.active {
+    background: linear-gradient(45deg, #ffd700, #ff6b6b);
+    color: #000;
+}
+
+.tab-btn:hover {
+    background: linear-gradient(45deg, #ff6b6b, #ffd700);
+    color: #000;
+}
+
+.category-selection {
+    margin-bottom: 10px;
+}
+
+.category-selection label {
+    margin-right: 20px;
+    color: #ffd700;
+}
+
+.category-selection input {
+    margin-right: 5px;
+}
+
+.question-form input[type="file"] {
+    margin-bottom: 10px;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    padding: 8px;
+}
+
+.attachments {
+    margin-top: 10px;
+}
+
+.attachment-image {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 5px;
+    border: 1px solid #ffd700;
+    border-radius: 5px;
+}
+
+.attachment-link {
+    color: #ff6b6b;
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+}
+
+.attachment-link:hover {
+    text-decoration: underline;
+}
+
 .questions-list {
     margin-top: 30px;
 }
@@ -230,4 +303,42 @@ h1 {
 
 .moderation-btns button:hover {
     background: #cc5555;
+}
+
+.user-login, .user-register {
+    background: rgba(26, 26, 26, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border: 2px solid #ffd700;
+    box-shadow: 0 4px 8px rgba(255,215,0,0.3);
+}
+
+.user-login h2, .user-register h2 {
+    color: #ffd700;
+    margin-top: 0;
+}
+
+.user-login input, .user-register input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+}
+
+.user-login button, .user-register button {
+    background: linear-gradient(45deg, #ffd700, #ff6b6b);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.user-login button:hover, .user-register button:hover {
+    background: linear-gradient(45deg, #ff6b6b, #ffd700);
 }

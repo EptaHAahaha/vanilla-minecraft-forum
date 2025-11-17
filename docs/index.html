@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Форум по Ванильному Minecraft</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/app.js" defer></script>
+    <script src="js/app.js" type="module" defer></script>
     <script src="js/admin.js" defer></script>
     <script src="js/storage.js" defer></script>
 </head>
@@ -18,9 +18,55 @@
                 <li><a href="index.html">Главная</a></li>
             </ul>
         </nav>
+        <button id="userLogoutBtn" class="logout-btn" style="display: none;" onclick="userLogout()">Выйти (Пользователь)</button>
     </header>
     <main>
-        <section id="questionsList">
+        <!-- User Login Form -->
+        <section id="userLoginForm" class="user-login">
+            <h2>Вход для пользователей</h2>
+            <input type="text" id="userUsername" placeholder="Имя пользователя">
+            <input type="password" id="userPassword" placeholder="Пароль">
+            <button onclick="userLogin()">Войти</button>
+        </section>
+
+        <!-- User Registration Form -->
+        <section id="userRegisterForm" class="user-register">
+            <h2>Регистрация</h2>
+            <input type="text" id="regUsername" placeholder="Имя пользователя">
+            <input type="password" id="regPassword" placeholder="Пароль">
+            <button onclick="userRegister()">Зарегистрироваться</button>
+        </section>
+
+        <!-- Tab Navigation -->
+        <nav class="tab-nav">
+            <button id="questionsTab" class="tab-btn active" onclick="switchTab('questions')">Вопросы</button>
+            <button id="complaintsTab" class="tab-btn" onclick="switchTab('complaints')">Жалобы</button>
+        </nav>
+
+        <!-- Question Form -->
+        <section id="questionForm" class="question-form" style="display: none;">
+            <h2>Задать вопрос или жалобу</h2>
+            <div class="category-selection">
+                <label><input type="radio" name="category" value="question" checked> Вопрос</label>
+                <label><input type="radio" name="category" value="complaint"> Жалоба</label>
+            </div>
+            <input type="text" id="questionTitle" placeholder="Заголовок">
+            <textarea id="questionText" placeholder="Текст"></textarea>
+            <input type="file" id="fileInput" multiple accept="image/*,video/*,audio/*,application/*">
+            <button onclick="postQuestion()">Опубликовать</button>
+        </section>
+
+        <!-- Admin Login Form -->
+        <section id="adminLogin" class="admin-login">
+            <h2>Вход для администраторов</h2>
+            <input type="text" id="adminUsername" placeholder="Имя администратора">
+            <input type="password" id="adminPassword" placeholder="Пароль">
+            <button onclick="adminLogin()">Войти как админ</button>
+        </section>
+
+        <button id="logoutBtn" class="logout-btn" style="display: none;" onclick="adminLogout()">Выйти (Админ)</button>
+
+        <section id="questionsList" class="questions-list">
             <!-- Вопросы будут добавляться сюда -->
         </section>
     </main>
