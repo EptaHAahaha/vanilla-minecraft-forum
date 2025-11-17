@@ -157,6 +157,35 @@ h1 {
     text-decoration: underline;
 }
 
+.fade-in {
+    animation: fadeInQuestion 0.5s ease-in forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInQuestion {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.question:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(255,215,0,0.4);
+}
+
+.tab-btn:hover {
+    transform: scale(1.05);
+}
+
+.question-form:hover {
+    transform: translateY(-5px) scale(1.01);
+}
+
 .questions-list {
     margin-top: 30px;
 }

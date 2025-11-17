@@ -41,14 +41,16 @@
         <nav class="tab-nav">
             <button id="questionsTab" class="tab-btn active" onclick="switchTab('questions')">Вопросы</button>
             <button id="complaintsTab" class="tab-btn" onclick="switchTab('complaints')">Жалобы</button>
+            <button id="discussionsTab" class="tab-btn" onclick="switchTab('discussions')">Обсуждения</button>
         </nav>
 
         <!-- Question Form -->
         <section id="questionForm" class="question-form" style="display: none;">
-            <h2>Задать вопрос или жалобу</h2>
+            <h2>Задать вопрос, жалобу или начать обсуждение</h2>
             <div class="category-selection">
                 <label><input type="radio" name="category" value="question" checked> Вопрос</label>
                 <label><input type="radio" name="category" value="complaint"> Жалоба</label>
+                <label><input type="radio" name="category" value="discussion"> Обсуждение</label>
             </div>
             <input type="text" id="questionTitle" placeholder="Заголовок">
             <textarea id="questionText" placeholder="Текст"></textarea>

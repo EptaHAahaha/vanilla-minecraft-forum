@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         activeTab = tab;
         document.getElementById('questionsTab').classList.toggle('active', tab === 'questions');
         document.getElementById('complaintsTab').classList.toggle('active', tab === 'complaints');
+        document.getElementById('discussionsTab').classList.toggle('active', tab === 'discussions');
         loadAndDisplayQuestions();
     };
 
@@ -101,6 +102,16 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Пост опубликован!');
     };
 
+    // Function to enhance design with animations
+    function addDesignEnhancements() {
+        // Add fade-in animation to questions
+        const questions = document.querySelectorAll('.question');
+        questions.forEach((q, index) => {
+            q.style.animationDelay = `${index * 0.1}s`;
+            q.classList.add('fade-in');
+        });
+    }
+
     function readFileAsDataURL(file) {
         return new Promise((resolve, reject) => {
             const reader = new FileReader();
@@ -150,5 +161,6 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             questionsList.appendChild(questionDiv);
         });
+        addDesignEnhancements();
     }
 });
